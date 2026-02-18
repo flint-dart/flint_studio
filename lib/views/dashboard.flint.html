@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlintStudio Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Sora', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 10px 40px rgba(14, 165, 233, 0.22)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <div class="relative min-h-screen">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.18),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(251,146,60,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.18),transparent_30%)]"></div>
+
+    <div class="relative mx-auto flex min-h-screen max-w-7xl flex-col md:flex-row">
+      <aside class="w-full border-b border-white/10 bg-slate-900/70 p-5 backdrop-blur-xl md:sticky md:top-0 md:h-screen md:w-72 md:overflow-y-auto md:border-b-0 md:border-r">
+        <div class="mb-8 rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-cyan-300">Flint Studio</p>
+          <h1 class="mt-2 text-2xl font-extrabold">Control Panel</h1>
+          <p class="mt-1 text-xs text-slate-400">Multi-profile connection manager</p>
+        </div>
+
+        <nav class="space-y-2">
+          <a class="block rounded-xl border px-4 py-3 text-sm font-semibold transition {{ activePage == 'dashboard' ? 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100 shadow-glow' : 'border-transparent text-slate-300 hover:border-white/10 hover:bg-white/5' }}" href="/?profile={{ currentProfileId }}">Dashboard</a>
+          <a class="block rounded-xl border px-4 py-3 text-sm font-semibold transition {{ activePage == 'databases' ? 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100 shadow-glow' : 'border-transparent text-slate-300 hover:border-white/10 hover:bg-white/5' }}" href="/databases?profile={{ currentProfileId }}">Databases</a>
+          <a class="block rounded-xl border px-4 py-3 text-sm font-semibold transition {{ activePage == 'query' ? 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100 shadow-glow' : 'border-transparent text-slate-300 hover:border-white/10 hover:bg-white/5' }}" href="/query?profile={{ currentProfileId }}">SQL Query</a>
+        </nav>
+      </aside>
+
+      <main class="flex-1 space-y-6 p-6 md:p-10">
+        <header class="rounded-3xl border border-white/10 bg-gradient-to-r from-sky-500/20 via-cyan-400/10 to-amber-400/15 p-6 shadow-2xl backdrop-blur-xl">
+          <p class="text-xs uppercase tracking-[0.28em] text-cyan-200">Connection Profiles</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl">MySQL + PostgreSQL Together</h2>
+          <p class="mt-2 max-w-xl text-sm text-slate-300">Save multiple credentials in JSON profiles and switch without overriding.</p>
+          {{ if currentProfileId != '' }}
+            <div class="mt-4 inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-xs text-slate-200">
+              <span class="font-semibold text-cyan-200">Active:</span>
+              <span>{{ currentProfileName }}</span>
+              <span>({{ currentDriver }})</span>
+              <span>{{ currentHost }}:{{ currentPort }}/{{ currentDatabase }}</span>
+            </div>
+          {{ endif }}
+        </header>
+
+        {{ if successMessage != '' }}
+          <section class="rounded-xl border border-emerald-300/40 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-100">{{ successMessage }}</section>
+        {{ endif }}
+        {{ if errorMessage != '' }}
+          <section class="rounded-xl border border-rose-300/40 bg-rose-400/10 px-4 py-3 text-sm text-rose-100">{{ errorMessage }}</section>
+        {{ endif }}
+
+        <section class="grid gap-6 xl:grid-cols-2">
+          <article class="rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-xl backdrop-blur-xl">
+            <h3 class="text-lg font-bold text-cyan-200">Save New Profile</h3>
+            <form method="POST" action="/connect" class="mt-4 grid gap-3 md:grid-cols-2">
+              <input type="text" name="profile_name" required value="{{ currentProfileName }}" placeholder="Profile name" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 placeholder:text-slate-500 focus:ring" />
+              <select name="driver" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 focus:ring">
+                <option value="mysql" {{ currentDriver == 'mysql' ? 'selected' : '' }}>mysql</option>
+                <option value="postgres" {{ currentDriver == 'postgres' ? 'selected' : '' }}>postgres</option>
+              </select>
+              <input type="text" name="host" required value="{{ currentHost }}" placeholder="Host" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 placeholder:text-slate-500 focus:ring" />
+              <input type="text" name="port" required value="{{ currentPort }}" placeholder="Port" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 placeholder:text-slate-500 focus:ring" />
+              <input type="text" name="database" required value="{{ currentDatabase }}" placeholder="Database" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 placeholder:text-slate-500 focus:ring" />
+              <input type="text" name="username" required value="{{ currentUser }}" placeholder="Username" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 placeholder:text-slate-500 focus:ring" />
+              <input type="password" name="password" placeholder="Password (leave blank to keep)" class="md:col-span-2 rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 placeholder:text-slate-500 focus:ring" />
+              <label class="md:col-span-2 inline-flex items-center gap-2 rounded-xl border border-white/15 px-3 py-2 text-sm text-slate-200"><input type="checkbox" name="secure" {{ currentSecure == 'true' ? 'checked' : '' }} class="accent-cyan-300" />Use secure connection (MySQL)</label>
+              <div class="md:col-span-2 flex flex-wrap gap-2">
+                <button type="submit" class="rounded-xl bg-cyan-300 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200">Save New + Connect</button>
+                {{ if currentProfileId != '' }}
+                  <button type="submit" formaction="/connections/update" formmethod="POST" name="profile_id" value="{{ currentProfileId }}" class="rounded-xl border border-amber-300/40 bg-amber-300/10 px-5 py-2 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/20">Update Active Profile</button>
+                {{ endif }}
+              </div>
+            </form>
+          </article>
+
+          <article class="rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-xl backdrop-blur-xl">
+            <h3 class="text-lg font-bold text-amber-200">Import .sql Using Active Profile</h3>
+            <form method="POST" action="/import-sql" enctype="multipart/form-data" class="mt-4 space-y-3">
+              <input type="hidden" name="profile_id" value="{{ currentProfileId }}" />
+              <input type="text" name="database_name" value="{{ currentDatabase }}" placeholder="Target database" class="w-full rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-amber-300/50 placeholder:text-slate-500 focus:ring" />
+              <input type="file" name="sql_file" accept=".sql,text/plain" required class="w-full rounded-xl border border-white/15 bg-slate-950/85 px-3 py-2 text-sm file:mr-3 file:rounded-lg file:border-0 file:bg-amber-300 file:px-3 file:py-1 file:text-xs file:font-semibold file:text-slate-950" />
+              <button type="submit" class="rounded-xl bg-amber-300 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-amber-200">Import SQL</button>
+            </form>
+          </article>
+        </section>
+
+        <section class="rounded-2xl border border-white/10 bg-slate-900/70 p-6">
+          <div class="mb-3 flex items-center justify-between">
+            <h3 class="text-lg font-bold text-indigo-200">Saved Profiles</h3>
+            <span class="text-xs text-slate-400">{{ profileCount }} saved</span>
+          </div>
+          {{ if profileCount == 0 }}
+            <p class="text-sm text-slate-400">No profiles saved yet.</p>
+          {{ else }}
+            <div class="grid gap-3">
+              {{ for p in profiles }}
+                <div class="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3">
+                  <div>
+                    <p class="text-sm font-semibold text-slate-100">{{ p.name }}</p>
+                    <p class="text-xs text-slate-400">{{ p.driver }} | {{ p.host }}:{{ p.port }}/{{ p.database }} | {{ p.username }}</p>
+                  </div>
+                  <form method="POST" action="/connections/switch">
+                    <input type="hidden" name="profile_id" value="{{ p.id }}" />
+                    <button type="submit" class="rounded-lg border border-cyan-300/40 bg-cyan-300/10 px-3 py-1.5 text-xs font-semibold text-cyan-100 transition hover:bg-cyan-300/20">Use</button>
+                  </form>
+                  <form method="POST" action="/connections/delete" onsubmit="return confirm('Delete profile {{ p.name }}? This cannot be undone.')">
+                    <input type="hidden" name="profile_id" value="{{ p.id }}" />
+                    <input type="text" name="confirm_name" required placeholder="Type {{ p.name }}" class="w-36 rounded-lg border border-rose-300/30 bg-slate-950/70 px-2 py-1 text-xs text-rose-100 placeholder:text-rose-200/50" />
+                    <button type="submit" class="rounded-lg border border-rose-300/40 bg-rose-300/10 px-3 py-1.5 text-xs font-semibold text-rose-100 transition hover:bg-rose-300/20">Delete</button>
+                  </form>
+                </div>
+              {{ endfor }}
+            </div>
+          {{ endif }}
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

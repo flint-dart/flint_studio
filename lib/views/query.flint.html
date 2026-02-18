@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlintStudio Query</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Sora', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <div class="relative min-h-screen">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.18),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(251,146,60,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.18),transparent_30%)]"></div>
+
+    <div class="relative mx-auto flex min-h-screen max-w-7xl flex-col md:flex-row">
+      <aside class="w-full border-b border-white/10 bg-slate-900/70 p-5 backdrop-blur-xl md:sticky md:top-0 md:h-screen md:w-72 md:overflow-y-auto md:border-b-0 md:border-r">
+        <div class="mb-8 rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-cyan-300">Flint Studio</p>
+          <h1 class="mt-2 text-2xl font-extrabold">Control Panel</h1>
+          <p class="mt-1 text-xs text-slate-400">Multi-profile connection manager</p>
+        </div>
+
+        <nav class="space-y-2">
+          <a class="block rounded-xl border px-4 py-3 text-sm font-semibold transition {{ activePage == 'dashboard' ? 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100' : 'border-transparent text-slate-300 hover:border-white/10 hover:bg-white/5' }}" href="/?profile={{ currentProfileId }}">Dashboard</a>
+          <a class="block rounded-xl border px-4 py-3 text-sm font-semibold transition {{ activePage == 'databases' ? 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100' : 'border-transparent text-slate-300 hover:border-white/10 hover:bg-white/5' }}" href="/databases?profile={{ currentProfileId }}">Databases</a>
+          <a class="block rounded-xl border px-4 py-3 text-sm font-semibold transition {{ activePage == 'query' ? 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100' : 'border-transparent text-slate-300 hover:border-white/10 hover:bg-white/5' }}" href="/query?profile={{ currentProfileId }}">SQL Query</a>
+        </nav>
+      </aside>
+
+      <main class="flex-1 space-y-6 p-6 md:p-10">
+        <header class="rounded-3xl border border-white/10 bg-gradient-to-r from-sky-500/20 via-cyan-400/10 to-amber-400/15 p-6 shadow-2xl backdrop-blur-xl">
+          <p class="text-xs uppercase tracking-[0.28em] text-cyan-200">SQL Workspace</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight">Interactive Query Console</h2>
+          <p class="mt-2 text-sm text-slate-300">Profile: {{ currentProfileName }} | Driver: {{ currentDriver }} | DB: {{ currentDatabase }}</p>
+        </header>
+
+        <section class="rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-xl backdrop-blur-xl">
+          <form id="query-form" class="space-y-4">
+            <label for="profile-id" class="block text-sm font-semibold text-cyan-200">Connection Profile</label>
+            <select id="profile-id" name="profile_id" class="w-full rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 focus:ring">
+              {{ for p in profiles }}
+                <option value="{{ p.id }}" {{ p.id == currentProfileId ? 'selected' : '' }}>{{ p.name }} ({{ p.driver }})</option>
+              {{ endfor }}
+            </select>
+
+            <label for="sql-input" class="block text-sm font-semibold text-cyan-200">SQL Statement</label>
+            <textarea id="sql-input" name="sql" rows="13" class="w-full rounded-xl border border-white/15 bg-slate-950/85 px-4 py-3 font-mono text-sm outline-none ring-cyan-300/50 transition placeholder:text-slate-500 focus:ring" placeholder="SELECT * FROM users LIMIT 10;"></textarea>
+            <div class="flex items-center gap-3">
+              <button type="submit" class="rounded-xl bg-cyan-300 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200">Run Query</button>
+              <span class="text-xs text-slate-400">Query runs against selected saved profile.</span>
+            </div>
+          </form>
+        </section>
+
+        <section class="rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-xl backdrop-blur-xl">
+          <h3 class="text-lg font-bold text-cyan-200">Result</h3>
+          <pre id="query-result" class="mt-4 min-h-44 overflow-auto rounded-xl border border-white/10 bg-black/40 p-4 font-mono text-xs text-slate-200">No query executed yet.</pre>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="/public/js/query.js"></script>
+</body>
+</html>

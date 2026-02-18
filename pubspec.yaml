@@ -1,0 +1,20 @@
+name: flint_studio
+description: FlintStudio database admin web app built with Flint Dart
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  flint_dart:
+    path: ../flint_dart
+  mysql_dart: any
+  crypto: ^3.0.3
+
+
+dependency_overrides:
+  mysql_dart:
+    git:
+      url: https://github.com/Hybiekay/mysql.dart
+      ref: main
