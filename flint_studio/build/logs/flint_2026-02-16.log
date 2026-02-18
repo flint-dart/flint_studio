@@ -1,0 +1,609 @@
+{"timestamp":"2026-02-16T20:08:30.308424","level":"DEBUG","tag":"","message":"FLINT_HOT=null","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:30.268995","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:30.316827","level":"DEBUG","tag":"","message":"[FLINT] Starting Parent Launcher (PID: 4924)...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:37.609294","level":"DEBUG","tag":"","message":"🔥 Flint Hot Reload Watcher Started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:37.633199","level":"DEBUG","tag":"","message":"📂 Watching: lib/","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:37.633199","level":"DEBUG","tag":"","message":"⏱️  Debounce: 300ms for templates, 500ms for server code","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:37.635137","level":"DEBUG","tag":"","message":"📡 Server endpoint: http://localhost:3000/_flint/internal/hot-reload","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:37.635137","level":"DEBUG","tag":"","message":"────────────────────────────────────────────────","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:37.636923","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:39.704048","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:47.141252","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:47.141252","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:47.194288","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:3000 (PID: 15300)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:47.212434","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:47.221768","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:08:47.221768","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:11:52.472153","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:11:52.472153","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:11:52.480644","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:11:54.509894","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:12:05.477362","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:12:05.507300","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:12:05.562067","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:3000 (PID: 5688)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:12:05.598782","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:12:05.601797","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:12:05.603118","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:18:56.531641","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:18:56.531641","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:18:56.532640","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:18:58.546640","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:19:02.364736","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:19:02.356657","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:19:02.386599","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:3000 (PID: 13360)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:19:02.402147","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:19:02.403153","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:19:02.400127","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:04.731795","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:04.732990","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:04.732990","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:06.760187","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:09.263150","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:09.269656","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:09.288907","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:3000 (PID: 5352)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:09.300069","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:09.301558","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:09.301558","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:10.559047","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:10.557776","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:10.559047","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:12.586615","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:12.616937","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:12.616937","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:12.649080","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:14.660445","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:16.129471","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:16.129471","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:16.167105","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:18.182680","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:21.662194","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:21.670453","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:21.692539","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:30303 (PID: 3228)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:21.728007","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:21.729003","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:21.730002","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:29.626559","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:29.637","level":"DEBUG","tag":"","message":"FLINT_HOT=null","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:29.639995","level":"DEBUG","tag":"","message":"[FLINT] Starting Parent Launcher (PID: 7628)...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:31.009857","level":"DEBUG","tag":"","message":"🔥 Flint Hot Reload Watcher Started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:31.028812","level":"DEBUG","tag":"","message":"📂 Watching: lib/","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:31.028812","level":"DEBUG","tag":"","message":"⏱️  Debounce: 300ms for templates, 500ms for server code","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:31.030018","level":"DEBUG","tag":"","message":"📡 Server endpoint: http://localhost:30303/_flint/internal/hot-reload","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:31.031022","level":"DEBUG","tag":"","message":"────────────────────────────────────────────────","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:31.034011","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:33.101363","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:36.432111","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:36.440552","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:36.461739","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:30303 (PID: 8528)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:36.477330","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:36.480897","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:20:36.482247","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:13.487011","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:13.488127","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+k":null}
+{"timestamp":"2026-02-16T20:23:13.488127","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+null}
+{"timestamp":"2026-02-16T20:23:13.492366","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:15.504664","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:15.504664","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:20.589362","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:20.597404","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:20.619285","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:30303 (PID: 11356)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:20.650170","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:20.653748","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:23:20.653748","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:49.938776","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:49.938776","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:49.938776","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:51.955541","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:51.955541","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:57.716591","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:57.724961","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:57.749065","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:3003 (PID: 3168)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:57.764141","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:57.765139","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:25:57.766612","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:26:45.621313","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:26:45.623545","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+null}
+{"timestamp":"2026-02-16T20:26:45.622530","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:26:47.635721","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:26:52.920175","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:26:52.928756","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:26:52.959501","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:3003 (PID: 18252)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:26:52.983709","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:26:52.985703","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:26:52.987140","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:07.266895","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:07.266895","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:07.270059","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+null}
+{"timestamp":"2026-02-16T20:28:07.269046","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:09.283062","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:13.544738","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:13.554156","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:13.579549","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4003 (PID: 16744)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:13.593684","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:13.596072","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:13.597515","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:39.158585","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:39.158585","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:39.158585","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:39.159742","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:41.175178","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:41.175178","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:47.146885","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:47.158853","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:47.242934","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:47.188775","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4003 (PID: 15992)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:47.246218","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:47.246218","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:47.524935","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:54.487629","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:54.488732","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+k":null}
+{"timestamp":"2026-02-16T20:28:54.530619","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+null}
+{"timestamp":"2026-02-16T20:28:54.488732","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:56.500960","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:28:56.553822","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:29:01.887287","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:29:01.896479","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:29:01.922884","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4007 (PID: 16440)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:29:01.943760","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:29:01.946780","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:29:01.947786","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:29:02.266827","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:31:11.718577","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: dashboard","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:31:11.729077","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:31:11.747167","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:31:37.854067","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:31:37.875692","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:31:37.876687","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:32:02.883843","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:32:02.883843","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\query.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:32:02.883843","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:14.150967","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:14.152146","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+k":null}
+{"timestamp":"2026-02-16T20:34:14.150967","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:14.152146","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:16.168272","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:16.198819","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:56.376362","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:56.376362","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:56.376362","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:56.379424","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:56.381420","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:58.394327","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:34:58.394327","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:03.975425","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:03.983482","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:04.010331","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4007 (PID: 21240)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:04.026640","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:04.028657","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:04.029837","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:04.353008","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:09.385461","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:09.387455","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:09.424892","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:35:09.425887","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:37:22.713108","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: dashboard","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:37:22.713108","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:37:22.714136","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: dashboard","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:37:22.715321","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:37:53.482119","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:37:53.484111","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+ack":null}
+{"timestamp":"2026-02-16T20:37:53.486103","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:38:50.792495","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:38:50.792495","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:38:50.922080","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:38:50.931056","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:39:14.643075","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:39:14.644103","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\query.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:39:14.727541","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:39:14.728539","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\query.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:37.648267","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:37.648267","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:37.648267","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:37.649382","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:39.663211","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:39.709058","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:44.376800","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:44.394424","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:44.421351","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:44.395422","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:44.495154","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:46.439680","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:46.517067","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:53.436838","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:53.450615","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:53.481636","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4007 (PID: 20532)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:53.503018","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:53.507008","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:53.509069","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:41:53.847425","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:42:04.350976","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:42:04.459969","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:42:40.527626","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:42:40.527626","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: dashboard","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:42:40.531944","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:42.905020","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:42.934938","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:42.904022","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:42.934938","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:49.340973","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:49.342012","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\query.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:49.342012","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:49.343017","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\query.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:56.437039","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:43:56.437039","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+ack":null}
+{"timestamp":"2026-02-16T20:43:56.438044","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:14.214477","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:14.214477","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+k":null}
+{"timestamp":"2026-02-16T20:44:14.214477","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:14.214477","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:16.238062","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:16.269285","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:27.097968","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:27.112097","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:27.142711","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4007 (PID: 19644)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:27.167536","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:27.170527","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:27.171524","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:44:27.674482","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:45:07.631392","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:45:13.891071","level":"DEBUG","tag":"","message":"✅ PostgreSQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:02.247142","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:02.247142","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:02.247142","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:02.248144","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:04.266413","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:04.328694","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:11.442708","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:11.457671","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:11.493033","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4007 (PID: 20444)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:11.520863","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:11.524079","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:46:11.525090","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:21.510096","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:21.510096","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+k":null}
+{"timestamp":"2026-02-16T20:48:21.510096","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:21.511099","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:23.529273","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:31.498847","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:31.517197","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:31.550580","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4007 (PID: 18836)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:31.571798","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:31.573845","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:48:31.574843","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:48.858668","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:48.858668","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:48.858668","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:48.858668","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:50.869811","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:50.869811","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:58.259302","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:58.269619","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:58.300599","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4027 (PID: 18236)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:58.324183","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:58.326178","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:50:58.326178","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:28.082744","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:28.082744","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:28.083743","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:28.082744","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:28.082744","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:28.083743","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:30.097032","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:30.099026","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:37.040898","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:37.049874","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:37.074440","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4027 (PID: 14656)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:37.101158","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:37.104544","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:52:37.104544","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:13.727668","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: dashboard","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:13.728666","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:13.728666","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:45.959235","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:45.976696","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+ack":null}
+{"timestamp":"2026-02-16T20:53:45.976696","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:49.326901","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:49.326901","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:49.327859","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:49.327859","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:49.326901","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:51.343463","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:51.343463","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:57.209116","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:57.219766","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:57.246876","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4033 (PID: 20500)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:57.276220","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:57.272767","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:53:57.277258","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:54:44.695486","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:54:44.695486","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:54:44.695486","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:12.942708","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:12.942708","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}
+ack":null}
+{"timestamp":"2026-02-16T20:55:12.943705","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\query.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:28.488993","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:28.488993","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+k":null}
+{"timestamp":"2026-02-16T20:55:28.488993","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:28.490082","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:30.514124","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:30.514124","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:42.253419","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:42.265720","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:42.309700","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4033 (PID: 19764)","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:42.368105","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:42.375222","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:42.377230","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:55:43.000266","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:56:44.306341","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:56:44.415518","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:56:46.396373","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:56:46.508326","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:56:50.583941","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:56:50.693238","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T20:56:50.714667","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:00:46.750664","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:00:46.862218","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:00:46.913584","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:04:16.334816","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:04:16.334816","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:04:16.334816","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:04:16.334816","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:04:16.334816","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:04:18.356153","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:04:18.390900","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:01.935185","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:01.935185","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:01.935185","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:01.937275","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:03.952720","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:03.952720","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:09.168240","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:09.178268","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:09.209881","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4033 (PID: 20368)","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:09.226645","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:09.229084","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:09.230314","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:09.488743","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:40.725411","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:40.726409","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:40.806197","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:05:40.926876","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:08:45.200616","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:08:45.308753","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:08:50.093388","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:08:50.203657","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:08:50.231073","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:26:34.336414","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:26:34.446432","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:26:34.473833","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:26:41.086961","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:26:41.199179","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:15.311574","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:15.424369","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:23.114329","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:23.226537","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:24.511712","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:24.639870","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:27.256098","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:27.366538","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:31.564663","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:29:31.672919","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:34:56.514876","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:34:56.734291","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:34:56.743306","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:35:04.601963","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:35:04.713670","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:35:04.768425","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:35:09.699649","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:35:09.810622","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:35:09.829415","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:35:18.682386","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:35:18.794953","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:35:36.767809","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:35:36.880345","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:38:11.858477","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:38:11.969838","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:38:16.599580","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:38:16.714108","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:38:16.723550","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:39:20.145002","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:39:20.256278","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:39:41.727882","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:39:41.839860","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:39:41.850396","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:42:59.583840","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:42:59.583840","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:42:59.585836","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:42:59.586834","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:01.615062","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:01.630260","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:10.143784","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:10.158578","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:10.194434","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4033 (PID: 19384)","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:10.217431","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:10.220888","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:10.221902","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:10.534198","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:36.479228","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:36.591301","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:39.617099","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:39.731398","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:43:39.871186","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:44:15.342275","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:15.456826","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:15.619935","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:44:30.961868","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:31.087307","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:38.200849","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:38.329858","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:38.421617","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:44:41.798247","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:41.907902","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:44.806541","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:44.915953","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:45.004781","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:44:48.802956","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:48.942193","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:52.186245","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:52.297355","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:44:52.369970","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:45:15.830314","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:45:15.941076","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:45:20.554777","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:45:20.665732","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:51:19.101119","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:51:19.211762","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:51:19.284948","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:51:28.045188","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:51:28.156376","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:56:25.092857","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:56:25.239381","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:58:17.717177","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:58:17.826885","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:58:19.243295","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:58:19.351699","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:58:29.526731","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:58:29.640647","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:58:29.772237","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:58:41.385502","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:58:41.496198","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:09.882460","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:09.992489","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:10.060347","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T21:59:51.652394","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:51.652394","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:51.687829","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+null}
+{"timestamp":"2026-02-16T21:59:51.655896","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:53.674441","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:53.709837","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:56.488455","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:56.488455","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+k":null}
+{"timestamp":"2026-02-16T21:59:56.526441","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:56.488455","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:56.595569","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:58.538237","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T21:59:58.619026","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:04.681777","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:04.689756","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:04.718681","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4033 (PID: 16920)","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:04.756143","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:04.758407","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:04.759403","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:05.017811","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:41.089080","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:41.199788","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:49.827668","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:49.939277","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:56.803782","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:56.916912","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:59.511899","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:59.625254","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:00:59.721534","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T22:01:14.096673","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:01:14.208293","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:02:23.996882","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:02:24.107915","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:02:24.190508","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T22:03:19.784575","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:03:19.894246","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:06:27.410023","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:06:27.523447","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:09.533082","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:09.535227","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+k":null}
+{"timestamp":"2026-02-16T22:47:09.733498","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:09.516958","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:09.536298","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:11.585276","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:11.753223","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:35.765540","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:35.765540","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:35.766820","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:35.768861","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:37.794266","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:37.794266","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:44.259720","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:44.269464","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:44.292441","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4033 (PID: 4476)","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:44.308384","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:44.311585","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:44.311585","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:44.757981","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:46.421805","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:46.425793","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:47:46.423803","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:48:00.903794","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:48:00.915820","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:48:00.915820","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:48:20.692991","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: table_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:48:20.693979","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\table_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:48:20.696971","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\table_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:49:23.774971","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:49:23.916592","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:50:47.170767","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:50:47.285188","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:50:47.683026","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T22:52:40.716611","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:40.716611","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Restarting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:40.722675","level":"DEBUG","tag":"","message":"🚀 Starting server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:40.721610","level":"DEBUG","tag":"","message":"♻️ Stopping old server...","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:42.757906","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:42.812083","level":"DEBUG","tag":"","message":"✅ Server started","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:48.342150","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:48.343148","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:48.378055","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:48.417950","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:55.260342","level":"DEBUG","tag":"","message":"[FLINT] ⚠️ Hot reload is ENABLED.","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:55.275098","level":"DEBUG","tag":"","message":"FLINT_HOT=1","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:55.319138","level":"DEBUG","tag":"","message":"[FLINT] Server Worker running on http://localhost:4033 (PID: 20564)","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:55.346035","level":"DEBUG","tag":"","message":"[FLINT] Database auto-connected via .env","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:55.350033","level":"DEBUG","tag":"","message":"📧 Mail server configured for Flint Dart <noreply@flintdart.eulogia.net>@smtp.gmail.com","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:55.350033","level":"INFO","tag":"","message":"📧 Mail configured using provider: gmail","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:52:55.660149","level":"DEBUG","tag":"","message":"✅ MySQL connected to flint_studio@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:53:13.574219","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:53:13.602520","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:53:13.574219","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:53:26.051796","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\table_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:53:26.051796","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: table_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:53:26.051796","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\table_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:57:00.495460","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:57:00.609494","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:57:00.827929","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T22:57:25.865131","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:57:25.976909","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:58:29.584743","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:58:29.698489","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:58:35.266075","level":"DEBUG","tag":"","message":"✅ MySQL connection closed","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:58:35.377162","level":"DEBUG","tag":"","message":"✅ MySQL connected to eucloudhost_next@localhost:3306","error":null,"stack":null}
+{"timestamp":"2026-02-16T22:58:35.542492","level":"DEBUG","tag":"","message":"","error":"MySQLServerException [1142]: SELECT command denied to user 'eucloudhost_next'@'localhost' for table 'user'","stack":null}
+{"timestamp":"2026-02-16T23:05:24.919916","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: dashboard","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:24.928893","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:24.968369","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: dashboard","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:24.985303","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\dashboard.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:30.950317","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:30.951582","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:31.489536","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: databases","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:31.531426","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\databases.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:36.075823","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:36.070837","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:36.347273","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: database_details","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:36.348471","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\database_details.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:41.767844","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:41.770842","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 📁 File: lib\\views\\query.flint.html","error":null,"stack":null}
+{"timestamp":"2026-02-16T23:05:41.767844","level":"DEBUG","tag":"","message":"[HOT-RELOAD] 🔄 Template changed: query","error":null,"stack":null}

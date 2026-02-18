@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlintStudio Databases</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Sora', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 10px 40px rgba(14, 165, 233, 0.22)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <div class="relative min-h-screen">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.18),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(251,146,60,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.18),transparent_30%)]"></div>
+
+    <div class="relative mx-auto flex min-h-screen max-w-7xl flex-col md:flex-row">
+      <aside class="w-full border-b border-white/10 bg-slate-900/70 p-5 backdrop-blur-xl md:sticky md:top-0 md:h-screen md:w-72 md:overflow-y-auto md:border-b-0 md:border-r">
+        <div class="mb-8 rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-cyan-300">Flint Studio</p>
+          <h1 class="mt-2 text-2xl font-extrabold">Control Panel</h1>
+          <p class="mt-1 text-xs text-slate-400">Multi-profile connection manager</p>
+        </div>
+
+        <nav class="space-y-2">
+          <a class="block rounded-xl border px-4 py-3 text-sm font-semibold transition {{ activePage == 'dashboard' ? 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100 shadow-glow' : 'border-transparent text-slate-300 hover:border-white/10 hover:bg-white/5' }}" href="/?profile={{ currentProfileId }}">Dashboard</a>
+          <a class="block rounded-xl border px-4 py-3 text-sm font-semibold transition {{ activePage == 'databases' ? 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100 shadow-glow' : 'border-transparent text-slate-300 hover:border-white/10 hover:bg-white/5' }}" href="/databases?profile={{ currentProfileId }}">Databases</a>
+          <a class="block rounded-xl border px-4 py-3 text-sm font-semibold transition {{ activePage == 'query' ? 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100 shadow-glow' : 'border-transparent text-slate-300 hover:border-white/10 hover:bg-white/5' }}" href="/query?profile={{ currentProfileId }}">SQL Query</a>
+        </nav>
+      </aside>
+
+      <main class="flex-1 space-y-6 p-6 md:p-10">
+        <header class="rounded-3xl border border-white/10 bg-gradient-to-r from-sky-500/20 via-cyan-400/10 to-amber-400/15 p-6 shadow-2xl backdrop-blur-xl">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p class="text-xs uppercase tracking-[0.28em] text-cyan-200">Databases</p>
+              <h2 class="mt-2 text-3xl font-extrabold tracking-tight">Database Manager</h2>
+              <p class="mt-2 text-sm text-slate-300">Driver: <span class="font-semibold text-cyan-200">{{ currentDriverLabel }}</span> | Profile: <span class="font-semibold text-cyan-200">{{ currentProfileName }}</span></p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-2 rounded-2xl border border-emerald-300/40 bg-emerald-300/10 px-4 py-2 text-sm font-semibold text-emerald-100">
+                <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
+                {{ currentDriverLabel }}
+              </span>
+              <span class="rounded-2xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-cyan-100">{{ databaseCount }} total</span>
+            </div>
+          </div>
+        </header>
+
+        {{ if successMessage != '' }}<section class="rounded-xl border border-emerald-300/40 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-100">{{ successMessage }}</section>{{ endif }}
+        {{ if errorMessage != '' }}<section class="rounded-xl border border-rose-300/40 bg-rose-400/10 px-4 py-3 text-sm text-rose-100">{{ errorMessage }}</section>{{ endif }}
+        {{ if profileErrorCount != 0 }}
+          <section class="rounded-xl border border-amber-300/40 bg-amber-400/10 px-4 py-3 text-sm text-amber-100">
+            <p class="font-semibold">Some profiles failed to load:</p>
+            <ul class="mt-2 list-disc pl-5 text-xs text-amber-50">
+              {{ for err in profileErrors }}
+                <li>{{ err }}</li>
+              {{ endfor }}
+            </ul>
+          </section>
+        {{ endif }}
+
+        <section class="rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-xl backdrop-blur-xl">
+          <h3 class="text-lg font-bold text-cyan-200">Create New Database</h3>
+          <form method="POST" action="/databases" class="mt-4 flex flex-col gap-3 sm:flex-row">
+            <input type="hidden" name="profile_id" value="{{ currentProfileId }}" />
+            <input type="text" name="database_name" required placeholder="example_app_db" class="w-full rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 placeholder:text-slate-500 focus:ring" />
+            <button type="submit" class="rounded-xl bg-cyan-300 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200">Create Database</button>
+          </form>
+        </section>
+
+        <section class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 shadow-xl backdrop-blur-xl">
+          <div class="border-b border-white/10 px-5 py-4"><h3 class="text-base font-semibold text-slate-100">All Databases</h3></div>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-left text-sm">
+              <thead class="bg-white/5 text-slate-300"><tr><th class="px-5 py-3 font-semibold">Database Name</th><th class="px-5 py-3 font-semibold">Profile</th><th class="px-5 py-3 font-semibold">Driver</th><th class="px-5 py-3 font-semibold">Action</th></tr></thead>
+              <tbody class="divide-y divide-white/5">
+                {{ if databaseCount == 0 }}
+                  <tr><td class="px-5 py-6 text-slate-400" colspan="4">No databases found.</td></tr>
+                {{ else }}
+                  {{ for entry in databaseEntries }}
+                    <tr class="transition hover:bg-white/5">
+                      <td class="px-5 py-4 font-medium text-slate-100">{{ entry.name }}</td>
+                      <td class="px-5 py-4 text-slate-300">{{ entry.profileName }}</td>
+                      <td class="px-5 py-4">
+                        <span class="inline-flex items-center rounded-lg border border-cyan-300/30 bg-cyan-300/10 px-2 py-1 text-xs font-semibold text-cyan-100">
+                          {{ entry.driverLabel }}
+                        </span>
+                      </td>
+                      <td class="px-5 py-4">
+                        <div class="flex flex-wrap gap-2">
+                          <a href="/databases/{{ entry.encodedName }}?profile={{ entry.profileId }}" class="inline-flex items-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 px-3 py-1.5 text-xs font-semibold text-cyan-100 transition hover:bg-cyan-300/20">Open</a>
+                          <form method="POST" action="/databases/{{ entry.encodedName }}/drop" onsubmit="return confirm('Drop database {{ entry.name }}? This cannot be undone.')">
+                            <input type="hidden" name="profile_id" value="{{ entry.profileId }}" />
+                            <input type="text" name="confirm_name" required placeholder="Type {{ entry.name }}" class="w-36 rounded-lg border border-rose-300/30 bg-slate-950/70 px-2 py-1 text-xs text-rose-100 placeholder:text-rose-200/50" />
+                            <button type="submit" class="inline-flex items-center rounded-lg border border-rose-300/40 bg-rose-300/10 px-3 py-1.5 text-xs font-semibold text-rose-100 transition hover:bg-rose-300/20">Drop</button>
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                  {{ endfor }}
+                {{ endif }}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

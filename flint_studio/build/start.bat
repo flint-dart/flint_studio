@@ -1,0 +1,3 @@
+@echo off
+echo 🚀 Starting Flint Application...
+flint_studio.exe
