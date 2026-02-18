@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1771271804288",
+    "name": "eucloudhost_next",
+    "driver": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "database": "eucloudhost_next",
+    "username": "eucloudhost_next",
+    "password": "enc:v1:IUN2NjdEOYX6SIqgEVyP1JgO3gslXJpJkyUUzR2G4PE=",
+    "secure": true,
+    "active": true
+  },
+  {
+    "id": "1771403889962057",
+    "name": "flint_docs",
+    "driver": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "database": "flint_docs",
+    "username": "flint_docs",
+    "password": "enc:v1:1+n7XwL5HXqLbd1QxSgUN66fkZoGiZPmpUs=",
+    "secure": true,
+    "active": false
+  }
+]
