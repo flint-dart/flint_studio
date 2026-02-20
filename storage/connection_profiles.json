@@ -7,9 +7,9 @@
     "port": 3306,
     "database": "eucloudhost_next",
     "username": "eucloudhost_next",
-    "password": "enc:v1:IUN2NjdEOYX6SIqgEVyP1JgO3gslXJpJkyUUzR2G4PE=",
+    "password": "enc:v1:UWgGP9GFHYy0F68caPrUtJMIOMm4coVxUN4sndUS5H8=",
     "secure": true,
-    "active": true
+    "active": false
   },
   {
     "id": "1771403889962057",
@@ -19,8 +19,32 @@
     "port": 3306,
     "database": "flint_docs",
     "username": "flint_docs",
-    "password": "enc:v1:1+n7XwL5HXqLbd1QxSgUN66fkZoGiZPmpUs=",
+    "password": "enc:v1:cKx1vfCOyFB8UffL2q2p1u3sTLn1BBosXJE=",
     "secure": true,
     "active": false
+  },
+  {
+    "id": "1771451330079778",
+    "name": "flint_studio",
+    "driver": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "database": "flint_studio",
+    "username": "root",
+    "password": "enc:v1:RFfUmPqD/u75rsKrblxCNOdeolvTUEpqwxhb",
+    "secure": true,
+    "active": false
+  },
+  {
+    "id": "1771604618703788",
+    "name": "julyDev2025",
+    "driver": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "database": "julyDev2025",
+    "username": "root",
+    "password": "enc:v1:mSTwq/P9InzJp4jXh0LTesuXuezcu+njWEMd",
+    "secure": true,
+    "active": true
   }
 ]

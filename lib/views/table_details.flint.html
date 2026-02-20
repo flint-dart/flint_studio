@@ -17,6 +17,7 @@
       <p class="mt-2 text-sm text-slate-300">Database: {{ databaseName }} | Profile: {{ currentProfileName }} ({{ currentDriver }})</p>
       <div class="mt-4 flex flex-wrap gap-3">
         <a href="/databases/{{ databaseName }}?profile={{ currentProfileId }}" class="rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold">Back To Database</a>
+        <a href="/databases/{{ databaseName }}/tables/{{ tableName }}/export?profile={{ currentProfileId }}" class="rounded-xl border border-emerald-300/40 bg-emerald-300/10 px-4 py-2 text-sm font-semibold text-emerald-100">Export Table</a>
         <form method="POST" action="/databases/{{ databaseName }}/tables/{{ tableName }}/drop" onsubmit="return confirm('Drop table {{ tableName }}? This cannot be undone.')">
           <input type="hidden" name="profile_id" value="{{ currentProfileId }}" />
           <input type="text" name="confirm_name" required placeholder="Type {{ tableName }}" class="rounded-xl border border-rose-300/30 bg-slate-950/70 px-3 py-2 text-xs text-rose-100 placeholder:text-rose-200/50" />
@@ -56,7 +57,7 @@
 
     <section class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70">
       <header class="border-b border-white/10 bg-white/5 px-5 py-4"><h2 class="text-base font-semibold">Rows (press Enter to save cell)</h2></header>
-      <div class="overflow-x-auto">
+      <div class="max-h-[70vh] overflow-auto">
         <table class="min-w-full text-left text-sm">
           <thead id="rows-head" class="text-slate-300"></thead>
           <tbody id="rows-body" class="divide-y divide-white/5"></tbody>
@@ -77,20 +78,20 @@
     const body = document.getElementById('rows-body');
 
     const headRow = document.createElement('tr');
+    const actionTh = document.createElement('th');
+    actionTh.className = 'sticky left-0 z-20 border-r border-white/10 bg-slate-900 px-5 py-3';
+    actionTh.textContent = 'Delete';
+    headRow.appendChild(actionTh);
+    const stateTh = document.createElement('th');
+    stateTh.className = 'px-5 py-3';
+    stateTh.textContent = 'Status';
+    headRow.appendChild(stateTh);
     columns.forEach((col) => {
       const th = document.createElement('th');
       th.className = 'px-5 py-3';
       th.textContent = col;
       headRow.appendChild(th);
     });
-    const stateTh = document.createElement('th');
-    stateTh.className = 'px-5 py-3';
-    stateTh.textContent = 'Status';
-    headRow.appendChild(stateTh);
-    const actionTh = document.createElement('th');
-    actionTh.className = 'px-5 py-3';
-    actionTh.textContent = 'Delete';
-    headRow.appendChild(actionTh);
     head.appendChild(headRow);
 
     function setStatus(cell, text, colorClass) {
@@ -161,6 +162,24 @@
         const statusCell = document.createElement('td');
         setStatus(statusCell, editable ? 'Ready' : 'Read only', editable ? 'text-slate-400' : 'text-amber-300');
 
+        const actionCell = document.createElement('td');
+        actionCell.className = 'sticky left-0 z-10 border-r border-white/10 bg-slate-900/95 px-5 py-3';
+        if (editable) {
+          const delBtn = document.createElement('button');
+          delBtn.type = 'button';
+          delBtn.className = 'rounded border border-rose-300/40 bg-rose-300/10 px-2 py-1 text-xs font-semibold text-rose-100';
+          delBtn.textContent = 'Delete';
+          delBtn.addEventListener('click', async () => {
+            await deleteRow(rowObj, statusCell, tr);
+          });
+          actionCell.appendChild(delBtn);
+        } else {
+          actionCell.textContent = '-';
+          actionCell.classList.add('text-slate-500');
+        }
+        tr.appendChild(actionCell);
+        tr.appendChild(statusCell);
+
         columns.forEach((col) => {
           const td = document.createElement('td');
           td.className = 'px-5 py-3';
@@ -182,25 +201,6 @@
 
           tr.appendChild(td);
         });
-
-        tr.appendChild(statusCell);
-
-        const actionCell = document.createElement('td');
-        actionCell.className = 'px-5 py-3';
-        if (editable) {
-          const delBtn = document.createElement('button');
-          delBtn.type = 'button';
-          delBtn.className = 'rounded border border-rose-300/40 bg-rose-300/10 px-2 py-1 text-xs font-semibold text-rose-100';
-          delBtn.textContent = 'Delete';
-          delBtn.addEventListener('click', async () => {
-            await deleteRow(rowObj, statusCell, tr);
-          });
-          actionCell.appendChild(delBtn);
-        } else {
-          actionCell.textContent = '-';
-          actionCell.classList.add('text-slate-500');
-        }
-        tr.appendChild(actionCell);
         body.appendChild(tr);
       });
     }

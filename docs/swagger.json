@@ -81,7 +81,31 @@
         ]
       }
     },
-    "/databases/{database}/tables/{table}": {
+    "/databases/{database}/export": {
+      "get": {
+        "summary": "",
+        "tags": [
+          "Default"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "database",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Path parameter: database"
+          }
+        ]
+      }
+    },
+    "/databases/{database}/tables/{table}/export": {
       "get": {
         "summary": "",
         "tags": [

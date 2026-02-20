@@ -74,33 +74,44 @@
         {{ endif }}
 
         <section class="rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-xl backdrop-blur-xl">
-          <h3 class="text-lg font-bold text-cyan-200">Create New Database</h3>
-          <form method="POST" action="/databases" class="mt-4 flex flex-col gap-3 sm:flex-row">
+          <h3 class="text-lg font-bold text-cyan-200">Create Database + User</h3>
+          <p class="mt-1 text-xs text-slate-400">Create a database, and optionally create a user with privileges in the same step.</p>
+          <form method="POST" action="/databases" class="mt-4 grid gap-3 md:grid-cols-2">
             <input type="hidden" name="profile_id" value="{{ currentProfileId }}" />
-            <input type="text" name="database_name" required placeholder="example_app_db" class="w-full rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 placeholder:text-slate-500 focus:ring" />
-            <button type="submit" class="rounded-xl bg-cyan-300 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200">Create Database</button>
+
+            <div class="md:col-span-2">
+              <input type="text" name="database_name" required placeholder="example_app_db" class="w-full rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-cyan-300/50 placeholder:text-slate-500 focus:ring" />
+            </div>
+
+            <input type="text" name="username" placeholder="Optional user name" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-indigo-300/50 placeholder:text-slate-500 focus:ring" />
+            <input type="password" name="password" placeholder="Optional user password" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-indigo-300/50 placeholder:text-slate-500 focus:ring" />
+
+            <input type="text" name="host" value="%" placeholder="Host (%)" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-indigo-300/50 placeholder:text-slate-500 focus:ring" />
+            <select name="privilege" class="rounded-xl border border-white/15 bg-slate-950/85 px-4 py-2 text-sm outline-none ring-indigo-300/50 focus:ring">
+              <option value="none">No privileges</option>
+              <option value="read_only">Read only</option>
+              <option value="read_write">Read + write</option>
+              <option value="all">All privileges</option>
+            </select>
+
+            <div class="md:col-span-2">
+              <button type="submit" class="rounded-xl bg-cyan-300 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200">Create Database</button>
+            </div>
           </form>
         </section>
 
         <section class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 shadow-xl backdrop-blur-xl">
           <div class="border-b border-white/10 px-5 py-4"><h3 class="text-base font-semibold text-slate-100">All Databases</h3></div>
-          <div class="overflow-x-auto">
+          <div class="max-h-[70vh] overflow-auto">
             <table class="min-w-full text-left text-sm">
-              <thead class="bg-white/5 text-slate-300"><tr><th class="px-5 py-3 font-semibold">Database Name</th><th class="px-5 py-3 font-semibold">Profile</th><th class="px-5 py-3 font-semibold">Driver</th><th class="px-5 py-3 font-semibold">Action</th></tr></thead>
+              <thead class="bg-white/5 text-slate-300"><tr><th class="sticky left-0 z-20 border-r border-white/10 bg-slate-900 px-5 py-3 font-semibold">Action</th><th class="px-5 py-3 font-semibold">Database Name</th><th class="px-5 py-3 font-semibold">Profile</th><th class="px-5 py-3 font-semibold">Driver</th></tr></thead>
               <tbody class="divide-y divide-white/5">
                 {{ if databaseCount == 0 }}
                   <tr><td class="px-5 py-6 text-slate-400" colspan="4">No databases found.</td></tr>
                 {{ else }}
                   {{ for entry in databaseEntries }}
                     <tr class="transition hover:bg-white/5">
-                      <td class="px-5 py-4 font-medium text-slate-100">{{ entry.name }}</td>
-                      <td class="px-5 py-4 text-slate-300">{{ entry.profileName }}</td>
-                      <td class="px-5 py-4">
-                        <span class="inline-flex items-center rounded-lg border border-cyan-300/30 bg-cyan-300/10 px-2 py-1 text-xs font-semibold text-cyan-100">
-                          {{ entry.driverLabel }}
-                        </span>
-                      </td>
-                      <td class="px-5 py-4">
+                      <td class="sticky left-0 z-10 border-r border-white/10 bg-slate-900/95 px-5 py-4">
                         <div class="flex flex-wrap gap-2">
                           <a href="/databases/{{ entry.encodedName }}?profile={{ entry.profileId }}" class="inline-flex items-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 px-3 py-1.5 text-xs font-semibold text-cyan-100 transition hover:bg-cyan-300/20">Open</a>
                           <form method="POST" action="/databases/{{ entry.encodedName }}/drop" onsubmit="return confirm('Drop database {{ entry.name }}? This cannot be undone.')">
@@ -109,6 +120,13 @@
                             <button type="submit" class="inline-flex items-center rounded-lg border border-rose-300/40 bg-rose-300/10 px-3 py-1.5 text-xs font-semibold text-rose-100 transition hover:bg-rose-300/20">Drop</button>
                           </form>
                         </div>
+                      </td>
+                      <td class="px-5 py-4 font-medium text-slate-100">{{ entry.name }}</td>
+                      <td class="px-5 py-4 text-slate-300">{{ entry.profileName }}</td>
+                      <td class="px-5 py-4">
+                        <span class="inline-flex items-center rounded-lg border border-cyan-300/30 bg-cyan-300/10 px-2 py-1 text-xs font-semibold text-cyan-100">
+                          {{ entry.driverLabel }}
+                        </span>
                       </td>
                     </tr>
                   {{ endfor }}

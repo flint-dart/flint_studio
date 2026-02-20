@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flint_dart/flint_dart.dart';
 import 'package:flint_dart/src/database/db.dart';
@@ -159,6 +160,206 @@ class AdminController {
     }
 
     return statements;
+  }
+
+  Future<void> _ensureDumpUtilityAvailable(String executable) async {
+    try {
+      final probe = await Process.run(executable, ['--version'], runInShell: true);
+      if (probe.exitCode != 0) {
+        throw Exception('$executable is not available in PATH.');
+      }
+    } catch (_) {
+      throw Exception('$executable is not installed or not in PATH.');
+    }
+  }
+
+  Future<String> _dumpSql({
+    required Map<String, dynamic> profile,
+    required String databaseName,
+    String? tableName,
+  }) async {
+    final driver = (profile['driver'] ?? '').toString();
+    final host = (profile['host'] ?? 'localhost').toString();
+    final port = (profile['port'] ?? '').toString();
+    final user = (profile['username'] ?? '').toString();
+    final password = (profile['password'] ?? '').toString();
+
+    if (driver == 'postgres') {
+      await _ensureDumpUtilityAvailable('pg_dump');
+      final args = <String>[
+        '-h',
+        host,
+        '-p',
+        port,
+        '-U',
+        user,
+        '-d',
+        databaseName,
+        '--no-owner',
+        '--no-privileges',
+      ];
+      if (tableName != null && tableName.isNotEmpty) {
+        args.addAll(['-t', tableName]);
+      }
+
+      final env = Map<String, String>.from(Platform.environment)
+        ..addAll({'PGPASSWORD': password});
+
+      final result = await Process.run(
+        'pg_dump',
+        args,
+        runInShell: true,
+        environment: env,
+      );
+      if (result.exitCode != 0) {
+        throw Exception('Export failed: ${result.stderr}');
+      }
+      return (result.stdout ?? '').toString();
+    }
+
+    if (driver == 'mysql') {
+      await _ensureDumpUtilityAvailable('mysqldump');
+      final args = <String>[
+        '-h',
+        host,
+        '-P',
+        port,
+        '-u',
+        user,
+        databaseName,
+      ];
+      if (tableName != null && tableName.isNotEmpty) {
+        args.add(tableName);
+      }
+
+      final env = Map<String, String>.from(Platform.environment)
+        ..addAll({'MYSQL_PWD': password});
+
+      final result = await Process.run(
+        'mysqldump',
+        args,
+        runInShell: true,
+        environment: env,
+      );
+      if (result.exitCode != 0) {
+        throw Exception('Export failed: ${result.stderr}');
+      }
+      return (result.stdout ?? '').toString();
+    }
+
+    throw Exception('Unsupported driver "$driver".');
+  }
+
+  String _downloadFileName({
+    required String databaseName,
+    String? tableName,
+  }) {
+    final now = DateTime.now();
+    final stamp =
+        '${now.year}${now.month.toString().padLeft(2, '0')}${now.day.toString().padLeft(2, '0')}_${now.hour.toString().padLeft(2, '0')}${now.minute.toString().padLeft(2, '0')}${now.second.toString().padLeft(2, '0')}';
+    if (tableName != null && tableName.isNotEmpty) {
+      return '${databaseName}_${tableName}_$stamp.sql';
+    }
+    return '${databaseName}_$stamp.sql';
+  }
+
+  String _normalizePrivilege(String value) {
+    final normalized = value.trim().toLowerCase();
+    switch (normalized) {
+      case 'read_only':
+      case 'read_write':
+      case 'all':
+        return normalized;
+      default:
+        return 'none';
+    }
+  }
+
+  Future<void> _createDatabaseUser({
+    required Map<String, dynamic> profile,
+    required String databaseName,
+    required String username,
+    required String password,
+    required String host,
+    required String privilege,
+  }) async {
+    final safePrivilege = _normalizePrivilege(privilege);
+    if (!_mysqlUserPattern.hasMatch(username) ||
+        password.isEmpty ||
+        !_hostPattern.hasMatch(host)) {
+      throw Exception('Invalid user input.');
+    }
+
+    final safePassword = _escapeSqlLiteral(password);
+
+    if (_isMySql(profile)) {
+      final safeUserLiteral = _escapeSqlLiteral(username);
+      final safeHostLiteral = _escapeSqlLiteral(host);
+
+      await DB.execute(
+        "CREATE USER IF NOT EXISTS '$safeUserLiteral'@'$safeHostLiteral' IDENTIFIED BY '$safePassword'",
+      );
+
+      if (safePrivilege == 'read_only') {
+        await DB.execute(
+          "GRANT SELECT ON `${_escapeIdentifier(databaseName)}`.* TO '$safeUserLiteral'@'$safeHostLiteral'",
+        );
+        await DB.execute('FLUSH PRIVILEGES');
+      } else if (safePrivilege == 'read_write') {
+        await DB.execute(
+          "GRANT SELECT, INSERT, UPDATE, DELETE ON `${_escapeIdentifier(databaseName)}`.* TO '$safeUserLiteral'@'$safeHostLiteral'",
+        );
+        await DB.execute('FLUSH PRIVILEGES');
+      } else if (safePrivilege == 'all') {
+        await DB.execute(
+          "GRANT ALL PRIVILEGES ON `${_escapeIdentifier(databaseName)}`.* TO '$safeUserLiteral'@'$safeHostLiteral'",
+        );
+        await DB.execute('FLUSH PRIVILEGES');
+      }
+      return;
+    }
+
+    final safeUser = _escapePgIdentifier(username);
+    final safeDatabase = _escapePgIdentifier(databaseName);
+    await DB.execute(
+      'CREATE ROLE "$safeUser" WITH LOGIN PASSWORD \'$safePassword\'',
+    );
+
+    if (safePrivilege == 'read_only') {
+      await DB.execute('GRANT CONNECT ON DATABASE "$safeDatabase" TO "$safeUser"');
+      await DB.execute('GRANT USAGE ON SCHEMA public TO "$safeUser"');
+      await DB.execute('GRANT SELECT ON ALL TABLES IN SCHEMA public TO "$safeUser"');
+      await DB.execute(
+        'ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO "$safeUser"',
+      );
+    } else if (safePrivilege == 'read_write') {
+      await DB.execute('GRANT CONNECT ON DATABASE "$safeDatabase" TO "$safeUser"');
+      await DB.execute('GRANT USAGE ON SCHEMA public TO "$safeUser"');
+      await DB.execute(
+        'GRANT SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER ON ALL TABLES IN SCHEMA public TO "$safeUser"',
+      );
+      await DB.execute(
+        'GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO "$safeUser"',
+      );
+      await DB.execute(
+        'ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER ON TABLES TO "$safeUser"',
+      );
+      await DB.execute(
+        'ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT USAGE, SELECT, UPDATE ON SEQUENCES TO "$safeUser"',
+      );
+    } else if (safePrivilege == 'all') {
+      await DB.execute('GRANT ALL PRIVILEGES ON DATABASE "$safeDatabase" TO "$safeUser"');
+      await DB.execute('GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO "$safeUser"');
+      await DB.execute(
+        'GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO "$safeUser"',
+      );
+      await DB.execute(
+        'ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO "$safeUser"',
+      );
+      await DB.execute(
+        'ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON SEQUENCES TO "$safeUser"',
+      );
+    }
   }
 
   Response _redirectWithMessage(
@@ -572,18 +773,54 @@ class AdminController {
         );
       }
 
+      final username = (form['username'] ?? '').trim();
+      final password = (form['password'] ?? '').trim();
+      final host = (form['host'] ?? '%').trim().isEmpty
+          ? '%'
+          : (form['host'] ?? '%').trim();
+      final privilege = _normalizePrivilege((form['privilege'] ?? '').trim());
+      final shouldCreateUser = username.isNotEmpty || password.isNotEmpty;
+
+      if (shouldCreateUser &&
+          (!_mysqlUserPattern.hasMatch(username) ||
+              password.isEmpty ||
+              !_hostPattern.hasMatch(host))) {
+        return _redirectWithMessage(
+          res,
+          '/databases',
+          error: 'Invalid user input.',
+          profileId: profile['id'].toString(),
+        );
+      }
+
       if (_isMySql(profile)) {
         await DB.execute(
           'CREATE DATABASE IF NOT EXISTS `${_escapeIdentifier(databaseName)}`',
         );
       } else {
-        await DB.execute('CREATE DATABASE "$databaseName"');
+        await DB.execute(
+          'CREATE DATABASE "${_escapePgIdentifier(databaseName)}"',
+        );
+      }
+
+      if (shouldCreateUser) {
+        await _connectWithProfile(profile, databaseOverride: databaseName);
+        await _createDatabaseUser(
+          profile: profile,
+          databaseName: databaseName,
+          username: username,
+          password: password,
+          host: host,
+          privilege: privilege,
+        );
       }
 
       return _redirectWithMessage(
         res,
         '/databases',
-        success: 'Database "$databaseName" created.',
+        success: shouldCreateUser
+            ? 'Database "$databaseName" and user "$username" created.'
+            : 'Database "$databaseName" created.',
         profileId: profile['id'].toString(),
       );
     } catch (e) {
@@ -1269,40 +1506,19 @@ class AdminController {
           ? '%'
           : (form['host'] ?? '%').trim();
       final grantAll = (form['grant_all'] ?? '').trim().toLowerCase() == 'on';
+      final privilege = _normalizePrivilege((form['privilege'] ?? '').trim());
+      final effectivePrivilege = privilege == 'none' && grantAll
+          ? 'all'
+          : privilege;
 
-      if (!_mysqlUserPattern.hasMatch(username) || password.isEmpty) {
-        return _redirectWithMessage(
-          res,
-          '/databases/${Uri.encodeComponent(databaseName)}',
-          error: 'Invalid user input.',
-          profileId: profile['id'].toString(),
-        );
-      }
-
-      final safePassword = _escapeSqlLiteral(password);
-
-      if (_isMySql(profile)) {
-        final safeUser = _escapeSqlLiteral(username);
-        final safeHost = _escapeSqlLiteral(host);
-        await DB.execute(
-          "CREATE USER IF NOT EXISTS '$safeUser'@'$safeHost' IDENTIFIED BY '$safePassword'",
-        );
-        if (grantAll) {
-          await DB.execute(
-            "GRANT ALL PRIVILEGES ON `${_escapeIdentifier(databaseName)}`.* TO '$safeUser'@'$safeHost'",
-          );
-          await DB.execute('FLUSH PRIVILEGES');
-        }
-      } else {
-        await DB.execute(
-          'CREATE ROLE "$username" WITH LOGIN PASSWORD \'$safePassword\'',
-        );
-        if (grantAll) {
-          await DB.execute(
-            'GRANT ALL PRIVILEGES ON DATABASE "$databaseName" TO "$username"',
-          );
-        }
-      }
+      await _createDatabaseUser(
+        profile: profile,
+        databaseName: databaseName,
+        username: username,
+        password: password,
+        host: host,
+        privilege: effectivePrivilege,
+      );
 
       return _redirectWithMessage(
         res,
@@ -1416,6 +1632,77 @@ class AdminController {
         res,
         '/',
         error: 'SQL import failed: ${e.toString()}',
+      );
+    }
+  }
+
+  Future<Response> exportDatabase(Request req, Response res) async {
+    final rawName = (req.params['database'] ?? '').trim();
+    final databaseName = Uri.decodeComponent(rawName);
+
+    if (!_isSafeIdentifier(databaseName)) {
+      return _redirectWithMessage(res, '/databases', error: 'Invalid database.');
+    }
+
+    try {
+      final profile = await _resolveProfile(req);
+      final sql = await _dumpSql(profile: profile, databaseName: databaseName);
+      final fileName = _downloadFileName(databaseName: databaseName);
+
+      res.raw.statusCode = HttpStatus.ok;
+      res.raw.headers.contentType = ContentType.parse('application/sql; charset=utf-8');
+      res.raw.headers.set(
+        'content-disposition',
+        'attachment; filename="$fileName"',
+      );
+      res.raw.write(sql);
+      await res.close();
+      return res;
+    } catch (e) {
+      return _redirectWithMessage(
+        res,
+        '/databases/${Uri.encodeComponent(databaseName)}',
+        error: 'Failed to export database: ${e.toString()}',
+      );
+    }
+  }
+
+  Future<Response> exportTable(Request req, Response res) async {
+    final rawDatabase = (req.params['database'] ?? '').trim();
+    final rawTable = (req.params['table'] ?? '').trim();
+    final databaseName = Uri.decodeComponent(rawDatabase);
+    final tableName = Uri.decodeComponent(rawTable);
+
+    if (!_isSafeIdentifier(databaseName) || !_isSafeIdentifier(tableName)) {
+      return _redirectWithMessage(res, '/databases', error: 'Invalid database/table name.');
+    }
+
+    try {
+      final profile = await _resolveProfile(req);
+      final sql = await _dumpSql(
+        profile: profile,
+        databaseName: databaseName,
+        tableName: tableName,
+      );
+      final fileName = _downloadFileName(
+        databaseName: databaseName,
+        tableName: tableName,
+      );
+
+      res.raw.statusCode = HttpStatus.ok;
+      res.raw.headers.contentType = ContentType.parse('application/sql; charset=utf-8');
+      res.raw.headers.set(
+        'content-disposition',
+        'attachment; filename="$fileName"',
+      );
+      res.raw.write(sql);
+      await res.close();
+      return res;
+    } catch (e) {
+      return _redirectWithMessage(
+        res,
+        '/databases/${Uri.encodeComponent(databaseName)}',
+        error: 'Failed to export table "$tableName": ${e.toString()}',
       );
     }
   }

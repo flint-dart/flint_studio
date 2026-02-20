@@ -47,7 +47,10 @@
               <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-cyan-100">{{ databaseName }}</h2>
               <p class="mt-2 text-sm text-slate-300">Profile: {{ currentProfileName }} | Driver: {{ currentDriver }}</p>
             </div>
-            <a href="/databases?profile={{ currentProfileId }}" class="rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:bg-white/10">Back</a>
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="/databases/{{ databaseName }}/export?profile={{ currentProfileId }}" class="rounded-xl border border-emerald-300/40 bg-emerald-300/10 px-4 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-300/20">Export DB</a>
+              <a href="/databases?profile={{ currentProfileId }}" class="rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:bg-white/10">Back</a>
+            </div>
           </div>
         </header>
 
@@ -112,10 +115,10 @@
 
         <section class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70">
           <header class="border-b border-white/10 bg-white/5 px-5 py-4"><h3 class="text-base font-semibold">Tables</h3></header>
-          <div class="overflow-x-auto">
+          <div class="max-h-[70vh] overflow-auto">
             <table class="min-w-full text-left text-sm">
               <thead class="text-slate-300">
-                <tr><th class="px-5 py-3">Table</th><th class="px-5 py-3">Engine</th><th class="px-5 py-3">Rows</th><th class="px-5 py-3">Action</th></tr>
+                <tr><th class="sticky left-0 z-20 border-r border-white/10 bg-slate-900 px-5 py-3">Action</th><th class="px-5 py-3">Table</th><th class="px-5 py-3">Engine</th><th class="px-5 py-3">Rows</th></tr>
               </thead>
               <tbody class="divide-y divide-white/5">
                 {{ if tableCount == 0 }}
@@ -123,16 +126,17 @@
                 {{ else }}
                   {{ for table in tables }}
                     <tr class="transition hover:bg-white/5">
-                      <td class="px-5 py-3"><a class="text-cyan-200 hover:underline" href="/databases/{{ databaseName }}/tables/{{ table.TABLE_NAME }}?profile={{ currentProfileId }}">{{ table.TABLE_NAME }}</a></td>
-                      <td class="px-5 py-3">{{ table.ENGINE }}</td>
-                      <td class="px-5 py-3">{{ table.TABLE_ROWS }}</td>
-                      <td class="px-5 py-3">
+                      <td class="sticky left-0 z-10 border-r border-white/10 bg-slate-900/95 px-5 py-3">
                         <form method="POST" action="/databases/{{ databaseName }}/tables/{{ table.TABLE_NAME }}/drop" class="flex flex-wrap items-center gap-2" onsubmit="return confirm('Drop table {{ table.TABLE_NAME }}?')">
+                          <a href="/databases/{{ databaseName }}/tables/{{ table.TABLE_NAME }}/export?profile={{ currentProfileId }}" class="rounded-lg border border-emerald-300/40 bg-emerald-300/10 px-3 py-1 text-xs font-semibold text-emerald-100 hover:bg-emerald-300/20">Export</a>
                           <input type="hidden" name="profile_id" value="{{ currentProfileId }}" />
                           <input type="text" name="confirm_name" required placeholder="Type {{ table.TABLE_NAME }}" class="w-40 rounded-lg border border-rose-300/30 bg-slate-950/70 px-2 py-1 text-xs text-rose-100 placeholder:text-rose-200/50" />
                           <button type="submit" class="rounded-lg border border-rose-300/40 bg-rose-300/10 px-3 py-1 text-xs font-semibold text-rose-100 hover:bg-rose-300/20">Drop</button>
                         </form>
                       </td>
+                      <td class="px-5 py-3"><a class="text-cyan-200 hover:underline" href="/databases/{{ databaseName }}/tables/{{ table.TABLE_NAME }}?profile={{ currentProfileId }}">{{ table.TABLE_NAME }}</a></td>
+                      <td class="px-5 py-3">{{ table.ENGINE }}</td>
+                      <td class="px-5 py-3">{{ table.TABLE_ROWS }}</td>
                     </tr>
                   {{ endfor }}
                 {{ endif }}
@@ -141,7 +145,7 @@
           </div>
         </section>
 
-        <section class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70"><header class="border-b border-white/10 bg-white/5 px-5 py-4"><h3 class="text-base font-semibold">Triggers</h3></header><div class="overflow-x-auto"><table class="min-w-full text-left text-sm"><thead class="text-slate-300"><tr><th class="px-5 py-3">Name</th><th class="px-5 py-3">Timing</th><th class="px-5 py-3">Event</th><th class="px-5 py-3">Table</th></tr></thead><tbody class="divide-y divide-white/5">{{ if triggerCount == 0 }}<tr><td class="px-5 py-4 text-slate-400" colspan="4">No triggers found.</td></tr>{{ else }}{{ for tr in triggers }}<tr class="transition hover:bg-white/5"><td class="px-5 py-3"><a class="text-amber-200 hover:underline" href="/databases/{{ databaseName }}/triggers/{{ tr.TRIGGER_NAME }}?profile={{ currentProfileId }}">{{ tr.TRIGGER_NAME }}</a></td><td class="px-5 py-3">{{ tr.ACTION_TIMING }}</td><td class="px-5 py-3">{{ tr.EVENT_MANIPULATION }}</td><td class="px-5 py-3">{{ tr.EVENT_OBJECT_TABLE }}</td></tr>{{ endfor }}{{ endif }}</tbody></table></div></section>
+        <section class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70"><header class="border-b border-white/10 bg-white/5 px-5 py-4"><h3 class="text-base font-semibold">Triggers</h3></header><div class="max-h-[70vh] overflow-auto"><table class="min-w-full text-left text-sm"><thead class="text-slate-300"><tr><th class="px-5 py-3">Name</th><th class="px-5 py-3">Timing</th><th class="px-5 py-3">Event</th><th class="px-5 py-3">Table</th></tr></thead><tbody class="divide-y divide-white/5">{{ if triggerCount == 0 }}<tr><td class="px-5 py-4 text-slate-400" colspan="4">No triggers found.</td></tr>{{ else }}{{ for tr in triggers }}<tr class="transition hover:bg-white/5"><td class="px-5 py-3"><a class="text-amber-200 hover:underline" href="/databases/{{ databaseName }}/triggers/{{ tr.TRIGGER_NAME }}?profile={{ currentProfileId }}">{{ tr.TRIGGER_NAME }}</a></td><td class="px-5 py-3">{{ tr.ACTION_TIMING }}</td><td class="px-5 py-3">{{ tr.EVENT_MANIPULATION }}</td><td class="px-5 py-3">{{ tr.EVENT_OBJECT_TABLE }}</td></tr>{{ endfor }}{{ endif }}</tbody></table></div></section>
 
         <section class="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70"><header class="border-b border-white/10 bg-white/5 px-5 py-4"><h3 class="text-base font-semibold">Users</h3></header><div class="p-5">{{ if usersError != '' }}<p class="rounded-xl border border-amber-300/40 bg-amber-400/10 px-4 py-3 text-sm text-amber-100">{{ usersError }}</p>{{ endif }}{{ if usersCount == 0 }}<p class="mt-2 text-sm text-slate-400">No users available to display.</p>{{ else }}<div class="mt-2 grid gap-2 md:grid-cols-2">{{ for account in users }}<div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm">{{ account.ACCOUNT }}</div>{{ endfor }}</div>{{ endif }}</div></section>
       </main>

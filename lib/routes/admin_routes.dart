@@ -26,7 +26,9 @@ class AdminRoutes extends RouteGroup {
     app.post('/databases', controller.createDatabase);
     app.post('/databases/:database/drop', controller.dropDatabase);
     app.get('/databases/:database', controller.databaseDetails);
+    app.get('/databases/:database/export', controller.exportDatabase);
     app.get('/databases/:database/tables/:table', controller.tableDetails);
+    app.get('/databases/:database/tables/:table/export', controller.exportTable);
     app.patch(
       '/databases/:database/tables/:table/rows',
       controller.updateTableRow,
